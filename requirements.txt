@@ -26,6 +26,7 @@ executing==2.0.1
 fastjsonschema==2.19.1
 filelock==3.14.0
 Flask==3.0.3
+Flask-Cors==4.0.1
 Flask-Login==0.6.3
 Flask-SocketIO==5.3.6
 fonttools==4.52.4
