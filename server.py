@@ -1,9 +1,11 @@
 from flask import Flask, render_template
 from flask_socketio import SocketIO, emit
 from flask_cors import CORS
+import os
 
 app = Flask(__name__)
-CORS(app)
+origin = os.environ.get('ORIGIN')
+CORS(app, origins=[origin])
 socketio = SocketIO(app)
 
 # Store chat messages
