@@ -5,7 +5,10 @@ import os
 
 app = Flask(__name__)
 origin = os.environ.get('ORIGIN')
-CORS(app, origins=[origin])
+if origin:
+    CORS(app, origins=[origin])
+else:
+    CORS(app)
 socketio = SocketIO(app)
 
 # Store chat messages
